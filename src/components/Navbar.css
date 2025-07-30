@@ -1,0 +1,107 @@
+.navbar {
+  border-bottom: none;
+  box-shadow: none;
+
+}
+
+button:focus,
+button:active,
+button:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.hamburger-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: start;
+  top: 1rem;
+  left: 1rem;
+  z-index: 1001;
+}
+
+.quick-access-container {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 250px;
+  height: 100%;
+  background-color: #fff;
+  transition: left 0.3s ease-in-out;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  z-index: 1000;
+}
+
+.quick-access-container.open {
+  left: 0;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  float: right;
+  cursor: pointer;
+}
+
+.quick-access-title {
+  margin-top: 2rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.quick-link-box {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+
+.quick-link {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  gap: 10px;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.quick-link:hover {
+  background-color: #f0f0f0;
+}
+
+.icon {
+  font-size: 1.2rem;
+}
+
+/* Light mode default */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* Optional: Sidebar dark styles */
+body.dark-mode .quick-access-container {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode .quick-link {
+  color: #ffffff;
+}
+
+body.dark-mode .quick-link:hover {
+  background-color: #333333;
+}

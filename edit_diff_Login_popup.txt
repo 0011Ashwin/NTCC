@@ -1,0 +1,78 @@
+e.preventDefault();
+    setError('');
+    setSuccess('');
+    if (!username || !password) {
+      setError('Please enter both username and password.');
+      return;
+    }
+    setLoading(true);
+
+    // Simulate API call with timeout
+    setTimeout(() => {
+      setLoading(false);
+      // Mock validation: username "user" and password "password" succeed
+      if (username === 'user' && password === 'password') {
+        setSuccess('Login successful!');
+        setError('');
+        // Here you can add further logic like redirect or storing auth token
+      } else {
+        setError('Invalid username or password.');
+        setSuccess('');
+      }
+    }, 1500);
+  };
+=======
+  const handleLogin = (e) => {
+    e.preventDefault();
+    setError('');
+    setSuccess('');
+    if (!username || !password) {
+      alert('Please enter both username and password.');
+      return;
+    }
+    setLoading(true);
+
+    // Simulate API call with timeout
+    setTimeout(() => {
+      setLoading(false);
+      // Mock validation: username "user" and password "password" succeed
+      if (username === 'user' && password === 'password') {
+        alert('Login successful!');
+        setError('');
+        setSuccess('');
+        // Here you can add further logic like redirect or storing auth token
+      } else {
+        alert('Invalid username or password.');
+        setError('');
+        setSuccess('');
+      }
+    }, 1500);
+  };
+>>>>>>> REPLACE
+
+<<<<<<< SEARCH
+  const handleSendOTP = (e) => {
+    e.preventDefault();
+    console.log('OTP sent to:', forgotEmail);
+    setOtpSent(true);
+  };
+=======
+  const handleSendOTP = (e) => {
+    e.preventDefault();
+    alert('OTP sent to: ' + forgotEmail);
+    setOtpSent(true);
+  };
+>>>>>>> REPLACE
+
+<<<<<<< SEARCH
+  const handleRegister = (e) => {
+    e.preventDefault();
+    console.log('Registering:', registerData);
+    // You can call API here
+  };
+=======
+  const handleRegister = (e) => {
+    e.preventDefault();
+    alert('Registering: ' + JSON.stringify(registerData));
+    // You can call API here
+  };

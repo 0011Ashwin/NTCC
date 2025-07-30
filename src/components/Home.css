@@ -1,0 +1,120 @@
+/* Home.css */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Slideshow container should take full height */
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Full-page background image */
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text overlay on slide */
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  /* semi-transparent overlay */
+  box-sizing: border-box;
+}
+
+/* Heading */
+.slide-overlay h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Subheading */
+.slide-overlay p {
+  font-size: 1.5rem;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.donate-btn {
+  padding: 12px 24px;
+  font-size: 1rem;
+  max-width: 100px;
+  background-color: #00ccff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.donate-btn:hover {
+  background-color: darkred;
+}
+
+/* Dots navigation */
+.dots-container {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.dot.active {
+  opacity: 1;
+  background-color: crimson;
+}
+
+/* QR Section shown only on slide 2 */
+.qr-section {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 16px 24px;
+  border-radius: 12px;
+  color: black;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 300px;
+}
+
+.qr-section p {
+  font-weight: 500;
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.qr-section .donor-date {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: crimson;
+}

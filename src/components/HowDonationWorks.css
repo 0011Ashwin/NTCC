@@ -1,0 +1,73 @@
+.how-donation-works {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9c0c0;
+  background-image: url('public/slides/pink-marble-bg.png'); /* Optional marble background if available */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.how-donation-works h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+.how-donation-works .highlight {
+  color: #a80000;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.step-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 25px;
+  width: 280px;
+  box-shadow: 0 0 15px rgba(168, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.step-card:hover {
+  box-shadow: 0 0 25px rgba(168, 0, 0, 0.3);
+}
+
+.step-card img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.step-card h3 {
+  color: #a80000;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.step-card p {
+  font-size: 1rem;
+  color: #333;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .steps-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .step-card {
+    width: 80%;
+    max-width: 350px;
+  }
+}

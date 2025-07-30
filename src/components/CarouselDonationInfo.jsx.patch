@@ -1,0 +1,11 @@
+id: 2,
+    title: 'You will get free refreshments after donation',
+    descrippublic/ slides / refresh.png', // Replace with actual icon path
+  },
+=======
+  {
+    id: 2,
+    title: 'You will get free refreshments after donation',
+    description: 'You will get free refreshments after donation',
+    icon: '/slides/refresh.png', // Replace with actual icon path
+  },

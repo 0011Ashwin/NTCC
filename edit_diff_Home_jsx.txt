@@ -1,0 +1,38 @@
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> REPLACE
+
+<<<<<<< SEARCH
+function LeadershipSection() {
+  return (
+    <div className="leadership-section">
+=======
+function LeadershipSection() {
+  const slideshowImages = [
+    '/images/modi.png',
+    '/images/nadda.png',
+    '/images/jadhav.png',
+    '/images/patel.png',
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slideshowImages.length);
+    }, 2000); // Change image every 2 seconds
+
+    return () => clearInterval(intervalId);
+  }, [slideshowImages.length]);
+
+  return (
+    <div>
+      <div className="slideshow-container">
+        <img
+          src={slideshowImages[currentIndex]}
+          alt="Slideshow"
+          className="slideshow-image"
+        />
+      </div>
+
+      <div className="leadership-section">

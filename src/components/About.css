@@ -1,0 +1,41 @@
+/* src/pages/About.css */
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Make About container full page */
+.about-container {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #f2f2f2, #ffffff);
+    /* Optional background */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Heading Style */
+.about-container h1 {
+    font-size: 2.8rem;
+    color: #a30000;
+    margin-bottom: 30px;
+}
+
+/* Paragraph Style */
+.about-container p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+}

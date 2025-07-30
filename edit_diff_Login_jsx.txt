@@ -1,0 +1,73 @@
+e.preventDefault();
+    console.log('Login:', { username, password, rememberMe });
+  };
+=======
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [success, setSuccess] = useState('');
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    setError('');
+    setSuccess('');
+    if (!username || !password) {
+      setError('Please enter both username and password.');
+      return;
+    }
+    setLoading(true);
+
+    // Simulate API call with timeout
+    setTimeout(() => {
+      setLoading(false);
+      // Mock validation: username "user" and password "password" succeed
+      if (username === 'user' && password === 'password') {
+        setSuccess('Login successful!');
+        setError('');
+        // Here you can add further logic like redirect or storing auth token
+      } else {
+        setError('Invalid username or password.');
+        setSuccess('');
+      }
+    }, 1500);
+  };
+>>>>>>> REPLACE
+
+<<<<<<< SEARCH
+            <button type="submit" className="login-btn">Login</button>
+
+            <p className="register-text">
+              Don't have an account?{' '}
+              <button
+                type="button"
+                className="link-button"
+                onClick={() => {
+                  setShowRegister(true);
+                }}
+              >
+                Register
+              </button>
+            </p>
+          </form>
+        )}
+=======
+            <button type="submit" className="login-btn" disabled={loading}>
+              {loading ? 'Logging in...' : 'Login'}
+            </button>
+
+            {error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
+            {success && <p style={{ color: 'green', marginTop: '10px' }}>{success}</p>}
+
+            <p className="register-text">
+              Don't have an account?{' '}
+              <button
+                type="button"
+                className="link-button"
+                onClick={() => {
+                  setShowRegister(true);
+                }}
+              >
+                Register
+              </button>
+            </p>
+          </form>
+        )}
